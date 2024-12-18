@@ -24,7 +24,12 @@ func main() {
 
 	r.GET("/weather/:zipcode", handlers.GetWeatherByZipcode)
 
-	if err := r.Run(":8080"); err != nil {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	if err := r.Run(":" + port); err != nil {
 		log.Fatal("Failed to start server: " + err.Error())
 	}
 }
