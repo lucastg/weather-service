@@ -72,5 +72,10 @@ docker run -p 8080:8080 weather-service
 ### **Acesse o endpoint**
 - Exemplo: http://localhost:8080/weather/00000001
 
+# Google Cloud Run
+```bash
+curl --location https://weather-service-zplysilqxa-uc.a.run.app/weather/{cep}
+```
+
 # **Licença**
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
